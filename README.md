@@ -5,18 +5,17 @@
 ## Feature
 
 集成以下功能：
+* ts
+* vuex
+* vue-router
+* eslint + prettier
+* alias
+* verify git commit message
+* 单元测试
+    * jest + vtu + @testing-library/vue
+* E2E测试
+    * cypress
 
-- ts
-- vuex
-- vue-router
-- e2e
-- cypress
-- test unit
-- jest + vtu + @testing-library/vue
-- eslint + prettier
-- verify git commit message
-- CI
-- alias
 
 ## 具体文档
 
