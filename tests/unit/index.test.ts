@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { mount } from "@vue/test-utils";
-import Test from "@/components/Test.vue";
+import Test from "../../src/components/Test.vue";
 import { a } from "./a";
 
 test("1+1=2", () => {
