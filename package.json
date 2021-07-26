@@ -28,7 +28,9 @@
   "dependencies": {
     "esbuild": "^0.12.15",
     "ts-jest": "26.5.1",
-    "vue": "^3.0.5"
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.10",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.8",
