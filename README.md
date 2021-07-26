@@ -20,4 +20,5 @@
 
 ## 具体文档
 
-[基于vue3+vite+ts项目环境搭建]: https://wiki.dm-ai.cn/pages/viewpage.action?pageId=319654347
+[基于vue3+vite+ts项目环境搭建 ](https://wiki.dm-ai.cn/pages/viewpage.action?pageId=319654347)
+
