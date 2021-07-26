@@ -27,7 +27,7 @@ npm manifest:
       "lint": "eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern"
     },
     "gitHooks": {
-      "commit-msg": "node scripts/verifyCommit.js"
+      "commit-msg": "echo '123'"
     },
     "dependencies": {
       "esbuild": "^0.12.15",
