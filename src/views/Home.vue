@@ -6,23 +6,23 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent } from "vue";
-import { useStore } from "vuex";
+import { computed, defineComponent } from 'vue';
+import { useStore } from 'vuex';
 
 export default defineComponent({
-  name: "Home",
+  name: 'Home',
   setup() {
     const store = useStore();
     console.log(store);
     const count = computed(() => store.state.count);
     const handleClick = () => {
-      store.commit("add");
+      store.commit('add');
     };
     return {
       count,
-      handleClick
+      handleClick,
     };
-  }
+  },
 });
 </script>
 

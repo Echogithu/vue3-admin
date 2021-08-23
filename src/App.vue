@@ -6,16 +6,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue";
-import Test from "@/components/Test.vue";
+import { defineComponent } from 'vue';
+import HelloWorld from '@/components/HelloWorld.vue';
+import Test from '@/components/Test.vue';
 
 export default defineComponent({
-  name: "App",
+  name: 'App',
   components: {
     HelloWorld,
-    Test
-  }
+    Test,
+  },
 });
 </script>
 

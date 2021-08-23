@@ -1,16 +1,19 @@
 {
-  "name": "vue3-scaffold-template",
-  "version": "0.0.0",
+  "name": "manage-frontend",
+  "version": "0.1.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build:test": "vue-tsc --noEmit && vite build --mode dev",
+    "tsc": "vue-tsc --noEmit",
     "serve": "vite preview",
     "lint": "eslint --ext .ts,vue src/** --no-error-on-unmatched-pattern",
     "commit": "git-cz",
     "test-unit": "jest",
     "test-e2e": "cypress open",
     "test-e2e-ci": "cypress run ",
-    "test": "yarn test-unit && yarn test-e2e-ci"
+    "test": "yarn test-unit && yarn test-e2e-ci",
+    "release": "standard-version"
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
@@ -26,11 +29,11 @@
     }
   },
   "dependencies": {
-    "esbuild": "^0.12.15",
     "ts-jest": "26.5.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.10",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "standard-version": "^9.3.0"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.14.8",
