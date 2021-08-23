@@ -8,15 +8,25 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import HelloWorld from '@/components/HelloWorld.vue';
 import Test from '@/components/Test.vue';
+import request from '@/utils/axios';
 
 export default defineComponent({
   name: 'App',
   components: {
     HelloWorld,
     Test,
+  },
+  setup() {
+    onMounted(() => {
+      request({
+        url: '/api/list',
+      }).then(res => {
+        console.log(res);
+      });
+    });
   },
 });
 </script>
