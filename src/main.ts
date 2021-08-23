@@ -3,5 +3,6 @@ import App from './App.vue';
 import { router } from './router';
 import { store } from './store';
 import antd from './plugins/antd';
+import './assets/styles/index.scss';
 
 createApp(App).use(router).use(store).use(antd).mount('#app');

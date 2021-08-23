@@ -14,7 +14,7 @@ export default defineConfig({
         },
       },
       scss: {
-        // additionalData: `@import "@/assets/styles/sassLoader/_index.scss";`,
+        additionalData: `@import "@/assets/styles/variable.scss";`,
       },
     },
   },

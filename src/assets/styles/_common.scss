@@ -1,0 +1,24 @@
+@mixin result-icon-bg($bg-color: $primary-color, $size: 64px) {
+  width: 64px;
+  height: 64px;
+  background-color: $bg-color;
+  line-height: $size;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+}
+
+.common-title-base {
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.success-icon-bg {
+  @include result-icon-bg;
+}
+
+.warn-icon-bg {
+  @include result-icon-bg(#f99018);
+}

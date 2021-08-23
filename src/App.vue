@@ -3,6 +3,7 @@
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <Test></Test>
   <a-button type="primary">测试</a-button>
+  <p class="test f22 bold mt18">测试全局样式</p>
   <router-view></router-view>
 </template>
 
@@ -20,13 +21,8 @@ export default defineComponent({
 });
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss">
+.test {
+  color: $success-color;
 }
 </style>
