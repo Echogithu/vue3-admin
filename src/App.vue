@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
   <Test></Test>
+  <a-button type="primary">测试</a-button>
   <router-view></router-view>
 </template>
 
