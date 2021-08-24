@@ -12,13 +12,13 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'home',
         name: 'Home',
-        component: () => import('@/views/home.vue'),
+        component: () => import('@/views/index/home.vue'),
         meta: { title: '首页' },
       },
       {
         path: '/details',
         name: 'Details',
-        component: () => import('@/views/Details.vue'),
+        component: () => import('@/views/index/details.vue'),
       },
     ],
   },
