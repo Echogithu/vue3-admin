@@ -1,6 +1,7 @@
 <template lang="pug">
 a-layout.layout-container(style="height:100vh")
   a-layout-sider
+    sider-bar
   a-layout
     a-layout-header.app-header.bg-white
       page-header
@@ -11,10 +12,11 @@ a-layout.layout-container(style="height:100vh")
 <script lang="ts">
 import { defineComponent } from 'vue';
 import PageHeader from './components/Header/index.vue';
+import SiderBar from './components/SiderBar/index.vue';
 
 export default defineComponent({
   name: 'Layouts',
-  components: { PageHeader },
+  components: { PageHeader, SiderBar },
 });
 </script>
 
