@@ -1,5 +1,7 @@
 <template lang="pug">
-div.sider-logo logo
+div.sider-logo.flex-center.color-333 
+  img(src="@/assets/images/DMAI_logo@2x.png" width="58")
+  span 中心调度服务前端
 </template>
 
 <script lang="ts">
@@ -12,8 +14,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .sider-logo {
-  height: 32px;
-  background: rgba(255, 255, 255, 0.3);
-  margin: 16px;
+  color: #333;
+  font-size: 20px;
+  line-height: 60px;
+  img {
+    margin-right: 11px;
+  }
 }
 </style>

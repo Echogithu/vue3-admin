@@ -1,6 +1,6 @@
 <template lang="pug">
 a-layout.layout-container(style="height:100vh")
-  a-layout-sider
+  a-layout-sider(width="280" :trigger="null" collapsible theme="light")
     sider-bar
   a-layout
     a-layout-header.app-header.bg-white
