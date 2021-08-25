@@ -1,6 +1,6 @@
 <template lang="pug">
 a-menu(v-model:openKeys="state.openKeys" v-model:selectedKeys="state.selectedKeys" :inline-collapsed="collapsed" mode="inline" theme="light" @click="clickMenuItem")
-  template( v-for="item in routes" :key="item.name")
+  template(v-for="item in routes" :key="item.name")
     sider-menu-item(:menuInfo="item")
 </template>
 
@@ -21,8 +21,6 @@ export default defineComponent({
     },
   },
   setup(props) {
-    console.log('routes :>> ', routes);
-
     // 当前路由
     const currentRoute = useRoute();
     const router = useRouter();
