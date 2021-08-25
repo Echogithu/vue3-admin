@@ -2,12 +2,19 @@
 template(v-if="!menuInfo.meta.hidden")
   a-sub-menu(v-if="menuInfo.children?.length" :key="menuInfo.name" v-bind="$attrs")
     template(#title)
-      <icon-font :type="menuInfo.meta.icon" />
-      Item(v-if="menuInfo.meta" :title="menuInfo.meta.title")
-    sider-menu-item(v-for="child in menuInfo.children" :menuInfo="child" :key="child.name")
+      span
+        icon-font(:type="menuInfo.meta.icon")
+        Item(v-if="menuInfo.meta" :title="menuInfo.meta.title")
+    template(v-for="child in menuInfo.children" :key="child.name")
+      template(v-if="!child.children")
+        a-menu-item(:key="child.name")
+          icon-font(:type="child.meta.icon")
+          Item(v-if="child.meta" :title="child.meta.title")
+      template(v-else)
+        sider-menu-item(:menuInfo="child" :key="child.name")
   template(v-else)
     a-menu-item(:key="menuInfo.name")
-      <icon-font :type="menuInfo.meta.icon" />
+      icon-font(:type="menuInfo.meta.icon")
       Item(v-if="menuInfo.meta" :title="menuInfo.meta.title")
 </template>
 <script lang="ts">

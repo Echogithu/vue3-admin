@@ -1,11 +1,11 @@
 <template lang="pug">
 a-menu(v-model:openKeys="state.openKeys" v-model:selectedKeys="state.selectedKeys" :inline-collapsed="collapsed" mode="inline" theme="light" @click="clickMenuItem")
-  template(v-for="item in routes" :key="item.name")
+  template(v-for="item in menus" :key="item.name")
     sider-menu-item(:menuInfo="item")
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, watch } from 'vue';
+import { computed, defineComponent, reactive, watch } from 'vue';
 import SiderMenuItem from './SiderMenuItem.vue';
 import { routes } from '@/router/routes';
 import { useRoute, useRouter } from 'vue-router';
@@ -34,11 +34,13 @@ export default defineComponent({
       selectedKeys: [currentRoute.name],
     });
 
+    const menus = computed(() => routes.find(item => item.name === 'Layout')!.children);
+
     // 监听菜单收缩状态
     watch(
       () => props.collapsed,
       newVal => {
-        state.openKeys = newVal ? [] : getOpenKeys();
+        // state.openKeys = newVal ? [] : getOpenKeys();
         state.selectedKeys = [currentRoute.name];
       }
     );
@@ -48,7 +50,7 @@ export default defineComponent({
       () => currentRoute.fullPath,
       () => {
         if (currentRoute.name == 'login' || props.collapsed) return;
-        state.openKeys = getOpenKeys();
+        // state.openKeys = getOpenKeys();
         state.selectedKeys = [currentRoute.name];
       }
     );
@@ -63,7 +65,7 @@ export default defineComponent({
     };
 
     return {
-      routes,
+      menus,
       state,
       clickMenuItem,
     };

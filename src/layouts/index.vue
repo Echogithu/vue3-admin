@@ -6,8 +6,9 @@ a-layout.layout-container(style="height:100vh")
     a-layout-header.app-header.bg-white
       a-button(@click="test") 点击折叠
       page-header
-    a-layout-content
-      router-view
+    a-layout-content.app-content
+      div.app-content-card
+        router-view
 </template>
 
 <script lang="ts">
@@ -46,6 +47,15 @@ export default defineComponent({
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .app-content {
+    background: #f0f2f5;
+    padding: 24px;
+    &-card {
+      width: 100%;
+      height: 100%;
+      background: #fff;
+    }
   }
 }
 </style>
