@@ -24,9 +24,9 @@ export const routes: Array<RouteRecordRaw> = [
     ],
   },
   {
-    path: '/test3',
+    path: '/https://www.iconfont.cn/',
+    name: 'https://www.iconfont.cn/',
     component: Layout,
     meta: { title: '导航3', icon: 'icon-linechart' },
-    name: 'Test3',
   },
 ];
