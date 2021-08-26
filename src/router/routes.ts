@@ -43,8 +43,22 @@ export const routes: Array<RouteRecordRaw> = [
             name: 'Index2',
             component: () => import('@/views/home/index.vue'),
             meta: { title: '测试1', icon: 'icon-adduser' },
+            children: [
+              {
+                path: 'index4',
+                name: 'Index4',
+                component: () => import('@/views/home/index.vue'),
+                meta: { title: '测试1', icon: 'icon-adduser' },
+              },
+            ],
           },
         ],
+      },
+      {
+        path: 'index3',
+        name: 'Index3',
+        component: RouterTransition,
+        meta: { title: '测试3', icon: 'icon-adduser' },
       },
     ],
   },

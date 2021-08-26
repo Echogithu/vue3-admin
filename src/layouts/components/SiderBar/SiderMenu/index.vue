@@ -9,7 +9,6 @@ import { computed, defineComponent, reactive, watch } from 'vue';
 import SiderMenuItem from './SiderMenuItem.vue';
 import { routes } from '@/router/routes';
 import { useRoute, useRouter } from 'vue-router';
-import { useStore } from 'vuex';
 
 export default defineComponent({
   name: 'SiderMenu',
@@ -24,7 +23,6 @@ export default defineComponent({
     // 当前路由
     const currentRoute = useRoute();
     const router = useRouter();
-    const store = useStore();
 
     // 获取当前打开的子菜单
     const getOpenKeys = () => [currentRoute.matched[0]?.name];

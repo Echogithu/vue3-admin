@@ -4,8 +4,7 @@ a-layout.layout-container(style="height:100vh")
     sider-bar(:collapsed="collapsed")
   a-layout
     a-layout-header.app-header.bg-white
-      a-button(@click="test") 点击折叠
-      page-header
+      page-header(v-model:collapsed="collapsed")
     a-layout-content.app-content
       div.app-content-card
         router-view
@@ -25,14 +24,13 @@ export default defineComponent({
 
     let asiderWidth = computed(() => (collapsed.value ? layoutVar.siderCollapsedWidth : layoutVar.siderBarWidth));
 
-    const test = () => {
-      collapsed.value = !collapsed.value;
-    };
+    // const update = () => {
+    //   collapsed.value = !collapsed.value;
+    // };
 
     return {
       collapsed,
       asiderWidth,
-      test,
     };
   },
 });
